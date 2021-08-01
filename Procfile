@@ -1,0 +1,1 @@
+web: gunicorn Mobile_News_Site.wsgi --log-file -

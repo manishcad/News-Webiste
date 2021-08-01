@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  background-color: ;
+  height: auto;
+}
+body {
+  background: linear-gradient(
+    to left bottom,
+    rgba(11, 11, 4, 1),
+    rgba(44, 14, 196, 0.9)
+  );
+  background-repeat: no-repeat;
+}
+.navbar {
+  background-color: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar h3 {
+  color: blueviolet;
+  font-size: 30px;
+  font-family: monospace;
+}
+.fas {
+  padding-right: 10px;
+  color: blueviolet;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+.link {
+  display: flex;
+}
+.link h3 {
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col-12 {
+  background-color: ;
+  display: flex;
+  justify-content: space-around;
+}
+.search_box {
+  margin-top: 50px;
+  background-color: ;
+  display: flex;
+  justify-content: center;
+}
+#my-col-5 {
+  background-color: ;
+  text-align: center;
+}
+.my_btn {
+  margin-top: 20px;
+  background-color: ;
+}
+#danger_btn {
+  width: 50%;
+}
+#news-details {
+  background-color: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#news-box {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.description p {
+  color: beige;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.description {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  background-color: ;
+}
+#news-box h1 {
+  color: white;
+  padding-top: 50px;
+}
+.author-name p {
+  color: yellowgreen;
+  padding-top: 5px;
+  font-weight: bold;
+}
+.date p {
+  color: white;
+  padding: 0;
+  background-color: ;
+}
+#img-col img {
+}

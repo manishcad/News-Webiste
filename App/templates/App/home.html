@@ -1,0 +1,89 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9c7fd495f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '../../../static/home.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <i class="fas fa-newspaper fa-3x"></i>
+        <h3>News_Api</h3>
+    </div>
+
+    <div class="links">
+        <div class="col-12 id">
+            <div class="link">
+                <i class="fas fa-home fa-2x"></i>
+                <a href="{% url 'home' %}"><h3>Home</h3></a>
+            </div>
+            <div class="link">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <h3>Profile</h3>
+            </div>
+            <div class="link">
+                <i class="fas fa-envelope-open-text fa-2x"></i>
+                <h3>Contact</h3>
+            </div>
+        </div>
+    </div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="search_box">
+            <div class="col-7" id="my-col-5">
+                <div class="search_input">
+                    <input style="text-align: center;" class="form-control" placeholder="Search By Trending News" name="search">
+                    <div class="my_btn">
+                        <button type="sumbit" class="btn btn-danger" id="danger_btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="Trending-news" style="text-align: center; margin-top: 50px;">
+        <u>
+            <h1 style="color: blueviolet;">Top Trending News</h1>
+        </u>
+    </div>
+    {% for i in data.articles %}
+
+
+    <div class="row" id="news-details" style="margin: 0; padding: 0;">
+        <div class="col-4" id="img-col">
+            <a href="{{i.url}}"><img src="{{i.urlToImage}}" class="img-thumbnail" alt="..."></a>
+        </div>
+        <div class="col-7" id="news-box">
+            <u>
+               <a href="{{i.url}}" style="text-decoration: none;"> <h1 style="width: 100%; font-size: 15px;">{{i.title}}</h1></a>
+            </u>
+            <div class="author-name">
+                <p>Author: {{i.author}}</p>
+            </div>
+            <div class="date">
+                <p>Date: {{i.publishedAt}}</p>
+            </div>
+            <div class="description">
+                <p>{{i.content}}</p>
+            </div>
+            <div class="my-btn">
+                <button type="submit" class="btn btn-primary">Read more...</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+
+</body>
+
+</html>
