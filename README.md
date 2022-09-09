@@ -1,2 +1,2 @@
 # News-Webiste
-News Website using Django
+This is a simple News Website using Django and Api
